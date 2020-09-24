@@ -5,11 +5,16 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { CardTravel } from '@material-ui/icons';
 import { useStateValue } from './StateProvider';
+import { auth } from './firebase';
 
 function Header() {
-  const [{ cart }] = useStateValue();
+  const [{ cart, user }] = useStateValue();
 
-  console.log(cart);
+  const login = () => {
+    if (user) {
+      auth.signOut();
+    }
+  }
 
   return (
     <nav className="header">
@@ -29,10 +34,10 @@ function Header() {
       {/* 3 Links */}
       <div className="header__nav">
         {/* 1st Link */}
-        <Link to="/login" className="header__link">
-          <div className="header__option">
-            <span className="header_optionLineOne">Hello User</span>
-            <span className="header_optionLineTwo">Sign In</span>
+        <Link to={!user && "/login"} className="header__link">
+          <div onClick={login} className="header__option">
+            <span className="header_optionLineOne">Hello {user?.email}</span>
+            <span className="header_optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>
 

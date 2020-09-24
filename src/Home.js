@@ -7,7 +7,7 @@ function Home() {
     <div className="home">
       <img
         className="home__image"
-        src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-voice-service/campaigns/2020/16909/16909_tall_gw_hero_wyze_band_3000x1200._CB409228392_.jpg"
+        src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/merch/2020/TV/THBY_S2/THBY_S2_02111_SuperheroGateway_Ep5_MaeveAtDawnUnit_3000x1200_JPEG_ARTMACHINE._CB406120327_.jpg" height="600px" width="1500px" data-a-hires="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/merch/2020/TV/THBY_S2/THBY_S2_02111_SuperheroGateway_Ep5_MaeveAtDawnUnit_3000x1200_JPEG_ARTMACHINE._CB406120327_.jpg"
         alt="home image"
       ></img>
 
